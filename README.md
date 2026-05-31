@@ -79,3 +79,6 @@ flutter run
 ```bash
 flutter test
 ```
+
+## Link Video Demo
+https://youtube.com/shorts/9WP05qH3P5o?si=-iQOJ2LD5VLCQzLi 
