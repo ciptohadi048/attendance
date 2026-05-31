@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "58278958369",
+    "project_id": "factory-attend-72702",
+    "storage_bucket": "factory-attend-72702.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58278958369:android:43fd094d3947f1d456da60",
+        "android_client_info": {
+          "package_name": "com.example.tugasgila"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmH4fCoEsZOGbkVrsk955wd8EuS0DgI1A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

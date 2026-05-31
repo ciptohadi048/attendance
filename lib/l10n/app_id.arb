@@ -1,0 +1,141 @@
+{
+  "@@locale": "id",
+  "@@author": "TugasGila Team",
+
+  "appName": "Factory Attendance",
+  "appTagline": "Modern Industrial HRIS",
+
+  "welcome": "Selamat Datang",
+  "loginSubtitle": "Masuk untuk memulai absensi Anda",
+  "nikOrEmail": "NIK atau Email",
+  "nikOrEmailHint": "Masukkan NIK atau email",
+  "password": "Password",
+  "passwordHint": "Masukkan password",
+  "rememberMe": "Ingat saya",
+  "forgotPassword": "Lupa password?",
+  "login": "Masuk",
+  "contactHrd": "Hubungi HRD jika Anda belum memiliki akun.",
+  "forgotPasswordTitle": "Lupa Password",
+  "forgotPasswordDesc": "Masukkan NIK dan nama Anda. Admin HRD akan mereset password Anda.",
+  "nik": "NIK",
+  "fullName": "Nama lengkap",
+  "name": "Nama",
+  "cancel": "Batal",
+  "sendToAdmin": "Kirim ke Admin",
+  "nikAndNameRequired": "NIK dan nama wajib diisi",
+  "requestSent": "Permintaan terkirim. Admin akan memproses segera.",
+  "requestFailed": "Gagal mengirim permintaan: {error}",
+  "@requestFailed": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "loginFailed": "Gagal masuk. Coba lagi.",
+
+  "todayAttendance": "Absensi Hari Ini",
+  "clockIn": "Clock In",
+  "clockOut": "Clock Out",
+  "attendanceComplete": "Absensi hari ini selesai",
+  "weeklyStats": "Statistik Minggu Ini",
+  "menu": "Menu",
+
+  "statusHadir": "Hadir",
+  "statusTelat": "Telat",
+  "statusIzin": "Izin",
+  "statusAlpha": "Alpha",
+
+  "history": "Riwayat",
+  "notifications": "Notifikasi",
+  "profile": "Profil",
+  "location": "Lokasi",
+
+  "clockInSuccess": "Clock In Berhasil",
+  "clockOutSuccess": "Clock Out Berhasil",
+  "attendanceFailed": "Absensi Gagal",
+
+  "backToDashboard": "Kembali ke Dashboard",
+  "retry": "Coba Lagi",
+
+  "gpsValidation": "Validasi GPS",
+  "checkingLocation": "Memeriksa lokasi Anda...",
+  "inArea": "Dalam Area",
+  "outsideArea": "Di Luar Area",
+  "distanceFromOffice": "{distance} dari kantor",
+  "@distanceFromOffice": {
+    "placeholders": {
+      "distance": { "type": "String" }
+    }
+  },
+  "proceedToSelfie": "Lanjut ke Selfie",
+  "outsideAreaWarning": "Anda berada di luar area kantor. Absensi tetap tercatat dengan status di luar area.",
+
+  "selfieCamera": "Kamera Selfie",
+  "faceDetected": "Wajah Terdeteksi",
+  "noFaceDetected": "Wajah Tidak Terdeteksi",
+  "takeSelfie": "Ambil Selfie",
+  "faceVerificationFailed": "Verifikasi Wajah Gagal",
+
+  "attendanceHistory": "Riwayat Absensi",
+  "attendanceDetail": "Detail Absensi",
+  "noRecords": "Belum ada data absensi",
+  "date": "Tanggal",
+  "time": "Waktu",
+  "status": "Status",
+  "selfie": "Selfie",
+  "locationInfo": "Informasi Lokasi",
+
+  "editProfile": "Edit Profil",
+  "changePassword": "Ubah Password",
+  "currentPassword": "Password Saat Ini",
+  "newPassword": "Password Baru",
+  "confirmPassword": "Konfirmasi Password",
+  "save": "Simpan",
+  "logout": "Keluar",
+  "logoutConfirm": "Yakin ingin keluar?",
+  "yes": "Ya",
+  "no": "Tidak",
+
+  "department": "Departemen",
+  "position": "Jabatan",
+  "phone": "Telepon",
+  "email": "Email",
+
+  "adminDashboard": "Dashboard Admin",
+  "employeeList": "Daftar Karyawan",
+  "employeeDetail": "Detail Karyawan",
+  "createUser": "Buat Pengguna",
+  "attendanceLogs": "Log Absensi",
+  "kpiCharts": "Grafik KPI",
+  "passwordRequests": "Permintaan Reset Password",
+  "adminMap": "Peta Karyawan",
+
+  "totalEmployees": "Total Karyawan",
+  "presentToday": "Hadir Hari Ini",
+  "lateToday": "Telat Hari Ini",
+  "absentToday": "Alpha Hari Ini",
+
+  "approve": "Setujui",
+  "reject": "Tolak",
+  "pending": "Menunggu",
+  "processed": "Diproses",
+
+  "export": "Ekspor",
+  "filter": "Filter",
+  "search": "Cari",
+  "all": "Semua",
+  "employee": "Karyawan",
+  "admin": "Admin",
+
+  "darkMode": "Mode Gelap",
+  "lightMode": "Mode Terang",
+  "language": "Bahasa",
+  "indonesian": "Indonesia",
+  "english": "English",
+
+  "errorGeneric": "Terjadi kesalahan",
+  "errorNetwork": "Koneksi gagal. Periksa internet Anda.",
+  "errorInvalidCredentials": "NIK / email atau password salah.",
+  "loading": "Memuat...",
+  "success": "Berhasil",
+  "failed": "Gagal"
+}

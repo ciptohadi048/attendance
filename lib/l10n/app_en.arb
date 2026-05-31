@@ -1,0 +1,140 @@
+{
+  "@@locale": "en",
+
+  "appName": "Factory Attendance",
+  "appTagline": "Modern Industrial HRIS",
+
+  "welcome": "Welcome",
+  "loginSubtitle": "Sign in to start your attendance",
+  "nikOrEmail": "NIK or Email",
+  "nikOrEmailHint": "Enter NIK or email",
+  "password": "Password",
+  "passwordHint": "Enter password",
+  "rememberMe": "Remember me",
+  "forgotPassword": "Forgot password?",
+  "login": "Sign In",
+  "contactHrd": "Contact HRD if you don't have an account yet.",
+  "forgotPasswordTitle": "Forgot Password",
+  "forgotPasswordDesc": "Enter your NIK and name. HRD Admin will reset your password.",
+  "nik": "NIK",
+  "fullName": "Full name",
+  "name": "Name",
+  "cancel": "Cancel",
+  "sendToAdmin": "Send to Admin",
+  "nikAndNameRequired": "NIK and name are required",
+  "requestSent": "Request sent. Admin will process it shortly.",
+  "requestFailed": "Failed to send request: {error}",
+  "@requestFailed": {
+    "placeholders": {
+      "error": { "type": "String" }
+    }
+  },
+  "loginFailed": "Login failed. Try again.",
+
+  "todayAttendance": "Today's Attendance",
+  "clockIn": "Clock In",
+  "clockOut": "Clock Out",
+  "attendanceComplete": "Today's attendance is complete",
+  "weeklyStats": "This Week's Stats",
+  "menu": "Menu",
+
+  "statusHadir": "Present",
+  "statusTelat": "Late",
+  "statusIzin": "Permit",
+  "statusAlpha": "Absent",
+
+  "history": "History",
+  "notifications": "Notifications",
+  "profile": "Profile",
+  "location": "Location",
+
+  "clockInSuccess": "Clock In Successful",
+  "clockOutSuccess": "Clock Out Successful",
+  "attendanceFailed": "Attendance Failed",
+
+  "backToDashboard": "Back to Dashboard",
+  "retry": "Retry",
+
+  "gpsValidation": "GPS Validation",
+  "checkingLocation": "Checking your location...",
+  "inArea": "In Area",
+  "outsideArea": "Outside Area",
+  "distanceFromOffice": "{distance} from office",
+  "@distanceFromOffice": {
+    "placeholders": {
+      "distance": { "type": "String" }
+    }
+  },
+  "proceedToSelfie": "Proceed to Selfie",
+  "outsideAreaWarning": "You are outside the office area. Attendance will still be recorded with outside area status.",
+
+  "selfieCamera": "Selfie Camera",
+  "faceDetected": "Face Detected",
+  "noFaceDetected": "No Face Detected",
+  "takeSelfie": "Take Selfie",
+  "faceVerificationFailed": "Face Verification Failed",
+
+  "attendanceHistory": "Attendance History",
+  "attendanceDetail": "Attendance Detail",
+  "noRecords": "No attendance records yet",
+  "date": "Date",
+  "time": "Time",
+  "status": "Status",
+  "selfie": "Selfie",
+  "locationInfo": "Location Info",
+
+  "editProfile": "Edit Profile",
+  "changePassword": "Change Password",
+  "currentPassword": "Current Password",
+  "newPassword": "New Password",
+  "confirmPassword": "Confirm Password",
+  "save": "Save",
+  "logout": "Logout",
+  "logoutConfirm": "Are you sure you want to logout?",
+  "yes": "Yes",
+  "no": "No",
+
+  "department": "Department",
+  "position": "Position",
+  "phone": "Phone",
+  "email": "Email",
+
+  "adminDashboard": "Admin Dashboard",
+  "employeeList": "Employee List",
+  "employeeDetail": "Employee Detail",
+  "createUser": "Create User",
+  "attendanceLogs": "Attendance Logs",
+  "kpiCharts": "KPI Charts",
+  "passwordRequests": "Password Reset Requests",
+  "adminMap": "Employee Map",
+
+  "totalEmployees": "Total Employees",
+  "presentToday": "Present Today",
+  "lateToday": "Late Today",
+  "absentToday": "Absent Today",
+
+  "approve": "Approve",
+  "reject": "Reject",
+  "pending": "Pending",
+  "processed": "Processed",
+
+  "export": "Export",
+  "filter": "Filter",
+  "search": "Search",
+  "all": "All",
+  "employee": "Employee",
+  "admin": "Admin",
+
+  "darkMode": "Dark Mode",
+  "lightMode": "Light Mode",
+  "language": "Language",
+  "indonesian": "Indonesia",
+  "english": "English",
+
+  "errorGeneric": "An error occurred",
+  "errorNetwork": "Connection failed. Check your internet.",
+  "errorInvalidCredentials": "NIK / email or password is incorrect.",
+  "loading": "Loading...",
+  "success": "Success",
+  "failed": "Failed"
+}

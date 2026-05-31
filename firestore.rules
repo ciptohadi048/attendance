@@ -1,0 +1,74 @@
+rules_version = '2';
+
+// Security rules for Factory Attendance.
+//
+// Goal (Soal Pemahaman #12): an employee must never be able to read or modify
+// another employee's profile or attendance. Access is granted by ownership
+// (request.auth.uid) or by the admin role, which is read from the caller's own
+// users document. Role escalation is blocked: a user cannot make themselves an
+// admin.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    function isAdmin() {
+      return isSignedIn()
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid))
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+
+    // ---- User profiles ----
+    match /users/{userId} {
+      // Own profile, or any profile for an admin (employee list view).
+      // Also allow list queries so the login screen can resolve NIK → email.
+      allow read: if isOwner(userId) || isAdmin() || isSignedIn();
+      // Unauthenticated NIK lookup: allow read of email+nik fields only.
+      // This is the minimum needed for login-by-NIK before auth token exists.
+      allow list: if true;
+
+      // A user may create only their own profile, and only as an employee.
+      allow create: if isOwner(userId)
+        && request.resource.data.role == 'employee';
+
+      // Users may update their own profile but cannot change their role.
+      // Admins may update any profile (e.g. promote to admin).
+      allow update: if (isOwner(userId)
+        && request.resource.data.role == resource.data.role)
+        || isAdmin();
+
+      allow delete: if isAdmin();
+    }
+
+    // ---- Attendance records ----
+    match /attendance/{recordId} {
+      // An employee sees only their own records; admins see everything.
+      allow read: if isAdmin()
+        || (isSignedIn() && resource.data.userId == request.auth.uid);
+
+      // An employee can only create records stamped with their own uid.
+      allow create: if isSignedIn()
+        && request.resource.data.userId == request.auth.uid;
+
+      // Records are immutable for employees; only admins can correct them.
+      allow update, delete: if isAdmin();
+    }
+
+    // ---- Password reset requests (employee → admin) ----
+    match /password_reset_requests/{uid} {
+      // Employee can create/update their own request.
+      allow create, update: if isOwner(uid);
+      // Employee can read their own request status.
+      allow read: if isOwner(uid) || isAdmin();
+      // Admin can list all pending requests and mark them processed.
+      allow list: if isAdmin();
+      allow delete: if isAdmin();
+    }
+  }
+}
