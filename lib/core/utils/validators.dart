@@ -1,7 +1,4 @@
-/// Pure, side-effect-free form validators.
-///
-/// Kept out of the widgets so the same rules can be unit-tested in isolation
-/// (supports the optional unit-test bonus) and reused across screens.
+/// Pure form validators, reused across screens.
 class Validators {
   Validators._();
 

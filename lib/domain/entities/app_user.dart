@@ -13,11 +13,6 @@ enum UserRole {
 }
 
 /// Pure domain entity representing an authenticated user.
-///
-/// This lives in the domain layer and has **no** dependency on Firebase. The
-/// data layer ([AppUserModel]) is responsible for mapping Firestore documents
-/// to/from this class, which keeps business logic framework-agnostic and
-/// testable (Clean Architecture dependency rule).
 class AppUser {
   const AppUser({
     required this.uid,

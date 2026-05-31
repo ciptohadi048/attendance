@@ -25,9 +25,6 @@ class FaceAnalysis {
 }
 
 /// Wraps ML Kit's [FaceDetector] with CameraImage → InputImage conversion.
-///
-/// Created once and kept alive for the duration of the camera session; call
-/// [dispose] when the camera is closed.
 class FaceDetectionService {
   FaceDetectionService()
       : _detector = FaceDetector(

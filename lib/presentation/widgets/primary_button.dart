@@ -4,8 +4,7 @@ import '../../core/theme/app_colors.dart';
 
 /// Primary call-to-action button with a built-in loading state.
 ///
-/// Disables itself and shows a spinner while [isLoading] is true, giving the
-/// user clear feedback during async work (rubric C4: user feedback) and
+/// Disables itself and shows a spinner while [isLoading] is true,
 /// preventing duplicate submissions.
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({

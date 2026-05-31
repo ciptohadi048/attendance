@@ -1,10 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 
-/// Translates raw exceptions (mostly [FirebaseAuthException]) into short,
-/// user-friendly Indonesian messages.
-///
-/// Centralizing this means the UI layer never has to know Firebase error codes,
-/// and every screen shows consistent wording (rubric B4: user-friendly errors).
+/// Translates [FirebaseAuthException] into user-friendly Indonesian messages.
 String authErrorMessage(Object error) {
   if (error is FirebaseAuthException) {
     switch (error.code) {

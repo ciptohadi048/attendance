@@ -1,10 +1,6 @@
-/// Centralized, immutable configuration values used across the app.
-///
-/// Keeping these in one place (instead of magic numbers scattered in widgets)
-/// makes the GPS rules, Firestore collection names, and storage paths easy to
-/// reason about and change in a single edit.
+/// App-wide configuration constants.
 class AppConstants {
-  AppConstants._(); // never instantiate – this is a static holder only.
+  AppConstants._();
 
   // ---------------------------------------------------------------------------
   // Branding

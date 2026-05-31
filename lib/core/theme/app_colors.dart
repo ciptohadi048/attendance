@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// The complete color palette for the app, derived from the assignment brief:
-/// Deep Navy (#0B1D3A), White, and Safety Orange (#FF6B35).
-///
-/// Defining tokens here (rather than hard-coding `Color(0xFF...)` in widgets)
-/// is what makes the design system consistent and satisfies the rubric's
-/// "color tokens" requirement (C1).
+/// Color palette: Deep Navy (#0B1D3A), White, and Safety Orange (#FF6B35).
 class AppColors {
   AppColors._();
 

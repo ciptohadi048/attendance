@@ -3,8 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'auth_providers.dart';
 
-/// Holds the active [ThemeMode] and persists changes to SharedPreferences so
-/// the user's dark/light choice survives restarts (bonus: dark-mode toggle).
+/// Holds the active [ThemeMode] and persists changes to SharedPreferences.
 class ThemeModeNotifier extends Notifier<ThemeMode> {
   @override
   ThemeMode build() {

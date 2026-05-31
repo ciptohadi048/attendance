@@ -10,8 +10,6 @@ import '../../../domain/entities/attendance_record.dart';
 import '../../router/app_routes.dart';
 
 /// Shown after a successful selfie + face validation.
-/// Displays the captured selfie, the timestamp, and the GPS status,
-/// then navigates back to the dashboard.
 class FaceSuccessScreen extends StatelessWidget {
   const FaceSuccessScreen({
     super.key,

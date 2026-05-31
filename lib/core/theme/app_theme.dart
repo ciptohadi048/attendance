@@ -4,12 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'app_colors.dart';
 
-/// Builds the [ThemeData] for the app from a single set of color tokens.
-///
-/// Both a dark theme (the primary "Modern Industrial" look) and a light theme
-/// are provided so a dark-mode toggle (bonus +3) can switch between them while
-/// staying visually consistent. Typography uses Inter via google_fonts for a
-/// clean enterprise feel.
+/// App theme configuration with dark and light variants.
+/// Typography uses Inter via google_fonts.
 class AppTheme {
   AppTheme._();
 
