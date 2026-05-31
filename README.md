@@ -55,20 +55,10 @@ lib/
 
 ## Cara Menjalankan
 
-### Prasyarat
+### Prerequisite
 - Flutter 3.29+
 - Firebase project yang sudah dikonfigurasi (`flutterfire configure`)
 
-### Setup Firebase
-1. Aktifkan provider **Email/Password** di Firebase Auth
-2. Buat database Firestore
-
-Seed akun demo dan deploy rules:
-
-```bash
-node tool/seed.mjs
-firebase deploy --only firestore:rules
-```
 
 ### Akun Demo
 
