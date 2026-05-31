@@ -1,7 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:intl/intl.dart';
 
+import '../../core/services/notification_service.dart';
 import '../../data/datasources/attendance_remote_datasource.dart';
 import '../../data/repositories/attendance_repository_impl.dart';
 import '../../domain/entities/attendance_record.dart';
@@ -88,6 +90,17 @@ class AttendanceController extends Notifier<AsyncValue<AttendanceRecord?>> {
       () => _repo.save(record, selfieFile: selfieFile),
     );
     state = result;
+
+    // Trigger notification based on result.
+    if (result.hasValue && result.value != null) {
+      final timeStr = DateFormat('HH:mm').format(now);
+      await NotificationService.instance.showClockInSuccess(time: timeStr);
+    } else if (result.hasError) {
+      await NotificationService.instance.showAttendanceFailure(
+        reason: 'Gagal menyimpan absen masuk. Silakan coba lagi.',
+      );
+    }
+
     // Invalidate today's cache so the dashboard reflects the new record.
     ref.invalidate(todayAttendanceProvider);
     return result.value;
@@ -120,6 +133,17 @@ class AttendanceController extends Notifier<AsyncValue<AttendanceRecord?>> {
       () => _repo.save(record, selfieFile: selfieFile),
     );
     state = result;
+
+    // Trigger notification based on result.
+    if (result.hasValue && result.value != null) {
+      final timeStr = DateFormat('HH:mm').format(now);
+      await NotificationService.instance.showClockOutSuccess(time: timeStr);
+    } else if (result.hasError) {
+      await NotificationService.instance.showAttendanceFailure(
+        reason: 'Gagal menyimpan absen pulang. Silakan coba lagi.',
+      );
+    }
+
     ref.invalidate(todayAttendanceProvider);
     return result.value;
   }
